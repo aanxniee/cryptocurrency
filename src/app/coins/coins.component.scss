@@ -34,3 +34,19 @@ table {
 td, th {
     width: 25%;
 }
+
+:host ::ng-deep .mat-sort-header-content {
+    color: #fff;
+}
+
+:host ::ng-deep .mat-paginator-outer-container {
+    background-color: rgb(36, 37, 37);
+}
+
+:host ::ng-deep tr.mat-header-row {
+    background-color: #B1E5F2;
+}
+
+:host ::ng-deep tr.mat-row {
+    height: 70px;
+}
