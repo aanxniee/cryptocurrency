@@ -10,7 +10,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 import { CoinsComponent } from './coins/coins.component';
 import { CoinDetailsComponent } from './coin-details/coin-details.component';
 
@@ -30,7 +31,8 @@ import { CoinDetailsComponent } from './coin-details/coin-details.component';
     MatSelectModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
