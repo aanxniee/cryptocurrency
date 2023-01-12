@@ -1,0 +1,23 @@
+.banner {
+    background: #4C4360;
+    width: 100%;
+}
+
+.header {
+    height: 40%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+
+    h2 {
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
+
+    h6 {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+}
