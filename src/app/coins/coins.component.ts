@@ -1,5 +1,6 @@
 import { ApiService } from '../service/api.service';
 import { OnInit, AfterViewInit, Component, ViewChild} from '@angular/core';
+import { Router } from '@angular/router';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
@@ -17,7 +18,7 @@ export class CoinsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api : ApiService) {
+  constructor(private api : ApiService, private router : Router) {
     
   }
   ngOnInit(): void {
@@ -34,7 +35,7 @@ export class CoinsComponent implements OnInit {
     })
   }
 
-  applyFilter(event: Event) {
+  applyFilter(event : Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
@@ -43,4 +44,7 @@ export class CoinsComponent implements OnInit {
     }
   }
 
+  goToDetails(row : any) {
+    this.router.navigate(['coin-details', row.id])
+  }
 }
