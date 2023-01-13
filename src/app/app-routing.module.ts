@@ -5,6 +5,7 @@ import { CoinsComponent } from './coins/coins.component';
 
 const routes: Routes = [
   {path:'', redirectTo : 'coins', pathMatch:'full'},
+  {path: '**', redirectTo: 'home', pathMatch:'full'},
   {path: 'coins', component: CoinsComponent},
   {path: 'coin-details/:id', component: CoinDetailsComponent}
 ];

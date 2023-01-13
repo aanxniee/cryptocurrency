@@ -18,6 +18,7 @@ export class CoinDetailsComponent implements OnInit {
   days: number = 30;
   currency: string = "CAD";
 
+  // ng charts settings
   public lineChartData: ChartConfiguration['data'] = {
     datasets: [
       {
@@ -29,7 +30,6 @@ export class CoinDetailsComponent implements OnInit {
         pointBorderColor: '#009688',
         pointHoverBackgroundColor: '#009688',
         pointHoverBorderColor: '#009688',
-
       }
     ],
     labels: []
@@ -93,7 +93,7 @@ export class CoinDetailsComponent implements OnInit {
       this.lineChartData.labels = res.prices.map((a:any)=>{
         let date = new Date(a[0]);
         let time = date.getHours() > 12 ? 
-        `${date.getHours() - 12}: ${date.getMinutes()} PM` :
+        `${date.getHours() - 12}: ${date.getMinutes()} PM` : 
         `${date.getHours()}: ${date.getMinutes()} AM`
         return this.days === 1 ? time : date.toLocaleDateString();
       })
