@@ -7,38 +7,38 @@
 
 
 <div class="container">
-    <mat-form-field>
-        <mat-label>Filter</mat-label>
-        <input style="color: white" matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    <mat-form-field class="search-bar">
+        <mat-label>Search</mat-label>
+        <input style="color: white" matInput (keyup)="applyFilter($event)" placeholder="Ex. Doge" #input>
       </mat-form-field>
       
       <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" matSort>
       
-          <!-- ID Column -->
+          <!-- Coin Column -->
           <ng-container matColumnDef="symbol">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Coin </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>COIN</th>
             <td mat-cell *matCellDef="let row"> 
                 <img [src]="row.image" width="20" alt="">
-                <span class="mx-2">{{row.symbol | uppercase}} </span>
+                <span class="mx-2">{{row.symbol | uppercase}}</span>
             </td>
           </ng-container>
       
-          <!-- Progress Column -->
+          <!-- Price Column -->
           <ng-container matColumnDef="current_price">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>PRICE</th>
             <td mat-cell *matCellDef="let row"> {{row.current_price | currency:currency}}% </td>
           </ng-container>
       
-          <!-- Name Column -->
+          <!-- 24h Change Column -->
           <ng-container matColumnDef="price_change_percentage_24h">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> 24h Change </th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>24H CHANGE</th>
             <td mat-cell *matCellDef="let row"> {{row.price_change_percentage_24h}}% </td>
           </ng-container>
       
-          <!-- Fruit Column -->
+          <!-- Market Cap Column -->
           <ng-container matColumnDef="market_cap">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Market Cap </th>
+            <th class="row-header" mat-header-cell *matHeaderCellDef mat-sort-header>MARKET CAP</th>
             <td mat-cell *matCellDef="let row"> {{row.market_cap | currency:currency}} </td>
           </ng-container>
       
@@ -53,4 +53,17 @@
       
         <mat-paginator [pageSizeOptions]="[10, 20, 50, 100]" aria-label="Select page of users"></mat-paginator>
       </div>
+</div>
+
+<div class="footer">
+  <p>
+    copyright ©
+    <script>
+      document.write(new Date().getFullYear())
+    </script>
+    aanxniee
+    <a href="https://github.com/aanxniee/cryptocurrency" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </p>
 </div>
