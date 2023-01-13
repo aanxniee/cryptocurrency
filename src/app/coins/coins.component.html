@@ -28,7 +28,7 @@
           <!-- Progress Column -->
           <ng-container matColumnDef="current_price">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
-            <td mat-cell *matCellDef="let row"> {{row.current_price | currency:'CAD'}}% </td>
+            <td mat-cell *matCellDef="let row"> {{row.current_price | currency:currency}}% </td>
           </ng-container>
       
           <!-- Name Column -->
@@ -40,7 +40,7 @@
           <!-- Fruit Column -->
           <ng-container matColumnDef="market_cap">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Market Cap </th>
-            <td mat-cell *matCellDef="let row"> {{row.market_cap | currency:'CAD'}} </td>
+            <td mat-cell *matCellDef="let row"> {{row.market_cap | currency:currency}} </td>
           </ng-container>
       
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
