@@ -72,6 +72,9 @@ export class CoinDetailsComponent implements OnInit {
     this.days = days;
     this.api.getGraphCurrencyData(this.coinId, "CAD", this.days)
     .subscribe(res=>{
+      setTimeout(()=> {
+        this.myLineChart.chart?.update();
+      }, 200);
       this.lineChartData.datasets[0].data = res.prices.map((a:any)=>{
         return a[1];
       });
@@ -81,8 +84,6 @@ export class CoinDetailsComponent implements OnInit {
         let time = date.getHours() > 12 ? 
         `${date.getHours() - 12}: ${date.getMinutes()} PM` :
         `${date.getHours()}: ${date.getMinutes()} AM`
-        console.log(time);
-        console.log(date);
         return this.days === 1 ? time : date.toLocaleDateString();
       })
     })
