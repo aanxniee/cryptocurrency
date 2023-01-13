@@ -12,11 +12,11 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$cryptocurrency-primary: mat.define-palette(mat.$indigo-palette);
-$cryptocurrency-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$cryptocurrency-primary: mat.define-palette(mat.$gray-palette, 100, 200);
+$cryptocurrency-accent: mat.define-palette(mat.$cyan-palette);
 
 // The warn palette is optional (defaults to red).
-$cryptocurrency-warn: mat.define-palette(mat.$red-palette);
+$cryptocurrency-warn: mat.define-palette(mat.$deep-purple-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -35,9 +35,20 @@ $cryptocurrency-theme: mat.define-dark-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+:root {
+  --rasin-black: #212121;
+  --quick-silver: #A6A6A8;
+  --ghost-white: #E8E9F3;
+  --grape-purple: #6554C0;
+  --blizzard-blue: #41C7E4;
+}
+
+html, body { 
+  height: 100%; 
+}
+
 body { 
   margin: 0; 
   font-family: poppins, sans-serif; 
-  background: #212121;
+  background: var(--rasin-black);
 }

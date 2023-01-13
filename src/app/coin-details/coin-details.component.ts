@@ -42,7 +42,7 @@ export class CoinDetailsComponent implements OnInit {
     },
 
     plugins: {
-      legend: { display: true },
+      legend: { display: false },
     }
   };
   public lineChartType: ChartType = 'line';
