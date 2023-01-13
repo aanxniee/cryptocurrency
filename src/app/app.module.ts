@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import { NgChartsModule } from 'ng2-charts';
 import { CoinsComponent } from './coins/coins.component';
 import { CoinDetailsComponent } from './coin-details/coin-details.component';
 
@@ -34,7 +35,8 @@ import { CoinDetailsComponent } from './coin-details/coin-details.component';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
