@@ -1,14 +1,14 @@
-<div class="container-field">
+<div class="container-field padded">
     <div class="row">
-        <div class="col-md-3 details">
+        <div class="col-md-4 details">
             <div class="img">
                 <img [src]="coinData?.image?.large" alt="">
                 <h3 class="text-center" style="font-size: 23px">{{coinData?.name}}</h3>
                 <h6 [innerHtml]="coinData?.description?.en.split('. ')[0]"></h6>
                 <div class="more-detail">
-                    <span class="title">Rank : </span><span class="value">{{coinData?.market_cap_rank}}</span><br>
-                    <span class="title">Current Price : </span><span class="value">{{coinData?.market_data.current_price.cad | currency: currency}}</span><br>
-                    <span class="title">Market Cap : </span><span class="value">{{coinData?.market_data.market_cap.cad | currency: currency}}</span>
+                    <span class="title">Rank: </span><span class="value">{{coinData?.market_cap_rank}}</span><br>
+                    <span class="title">Current Price: </span><span class="value">{{coinData?.market_data.current_price.cad | currency: currency}}</span><br>
+                    <span class="title">Market Cap: </span><span class="value">{{coinData?.market_data.market_cap.cad | currency: currency}}</span>
                 </div>
             </div>
         </div>
@@ -23,4 +23,17 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="footer">
+    <p>
+      copyright ©
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      aanxniee
+      <a href="https://github.com/aanxniee/cryptocurrency" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </p>
 </div>
