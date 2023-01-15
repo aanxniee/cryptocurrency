@@ -1,9 +1,9 @@
 import { ApiService } from '../service/api.service';
-import { OnInit, AfterViewInit, Component, ViewChild} from '@angular/core';
+import { OnInit, Component, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { CurrencyService } from '../service/currency.service';
 
 @Component({
@@ -11,6 +11,7 @@ import { CurrencyService } from '../service/currency.service';
   templateUrl: './coins.component.html',
   styleUrls: ['./coins.component.scss']
 })
+
 export class CoinsComponent implements OnInit {
   currency : string = "CAD";
   dataSource!: MatTableDataSource<any>;
@@ -19,9 +20,8 @@ export class CoinsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api : ApiService, private router : Router, private currencyService : CurrencyService) {
-    
-  }
+  constructor(private api : ApiService, private router : Router, private currencyService : CurrencyService) { }
+  
   ngOnInit(): void {
     this.getAllData();
     this.currencyService.getCurrency()

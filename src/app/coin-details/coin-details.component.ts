@@ -34,6 +34,7 @@ export class CoinDetailsComponent implements OnInit {
     ],
     labels: []
   };
+
   public lineChartOptions: ChartConfiguration['options'] = {
     elements: {
       point: {
@@ -45,6 +46,7 @@ export class CoinDetailsComponent implements OnInit {
       legend: { display: false },
     }
   };
+
   public lineChartType: ChartType = 'line';
   @ViewChild(BaseChartDirective) myLineChart !: BaseChartDirective;
 
@@ -74,23 +76,23 @@ export class CoinDetailsComponent implements OnInit {
       }
       res.market_data.current_price.cad = res.market_data.current_price.cad;
       res.market_data.market_cap.cad = res.market_data.market_cap.cad;
-      this.coinData=res;
+      this.coinData = res;
       console.log(this.coinData);
     });
   }
 
-  getGraphData(days:number) {
+  getGraphData(days : number) {
     this.days = days;
     this.api.getGraphCurrencyData(this.coinId, this.currency, this.days)
     .subscribe(res=>{
       setTimeout(()=> {
         this.myLineChart.chart?.update();
       }, 200);
-      this.lineChartData.datasets[0].data = res.prices.map((a:any)=>{
+      this.lineChartData.datasets[0].data = res.prices.map((a : any)=>{
         return a[1];
       });
 
-      this.lineChartData.labels = res.prices.map((a:any)=>{
+      this.lineChartData.labels = res.prices.map((a : any)=>{
         let date = new Date(a[0]);
         let time = date.getHours() > 12 ? 
         `${date.getHours() - 12}: ${date.getMinutes()} PM` : 

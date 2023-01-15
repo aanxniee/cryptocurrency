@@ -10,9 +10,7 @@ export class AppComponent {
   title = 'cryptocurrency';
   selectedCurrency : string = "CAD";
 
-  constructor(private currencySerivce : CurrencyService) {
-    
-  }
+  constructor(private currencySerivce : CurrencyService) { }
 
   sendCurrency(event:string) {
     console.log(event);
