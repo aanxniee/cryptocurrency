@@ -5,6 +5,13 @@
 
 .logo {
   width: 80px;
+  transition: transform .7s ease-in-out;
+}
+
+.logo:hover {
+  cursor: pointer;
+  transform: rotate(360deg) scale(1.1);
+
 }
 
 .form {
