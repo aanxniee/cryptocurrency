@@ -13,10 +13,10 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $cryptocurrency-primary: mat.define-palette(mat.$gray-palette, 100, 200);
-$cryptocurrency-accent: mat.define-palette(mat.$cyan-palette);
+$cryptocurrency-accent: mat.define-palette(mat.$gray-palette);
 
 // The warn palette is optional (defaults to red).
-$cryptocurrency-warn: mat.define-palette(mat.$deep-purple-palette);
+$cryptocurrency-warn: mat.define-palette(mat.$gray-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".

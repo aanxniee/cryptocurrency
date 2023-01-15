@@ -25,11 +25,11 @@ export class CoinDetailsComponent implements OnInit {
         data: [],
         label: `Price Trends`,
         backgroundColor: 'rgba(148,159,177,0.2)',
-        borderColor: '#009688',
-        pointBackgroundColor: '#009688',
-        pointBorderColor: '#009688',
-        pointHoverBackgroundColor: '#009688',
-        pointHoverBorderColor: '#009688',
+        borderColor: '#41C7E4',
+        pointBackgroundColor: '#41C7E4',
+        pointBorderColor: '#41C7E4',
+        pointHoverBackgroundColor: '#41C7E4',
+        pointHoverBorderColor: '#41C7E4',
       }
     ],
     labels: []
